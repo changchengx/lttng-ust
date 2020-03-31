@@ -1,0 +1,546 @@
+ust (2.11.1-1) unstable; urgency=medium
+
+  * [f5f3f39] New upstream version 2.11.1
+  * [279c100] Remove erroneously exported symbol in liblttng-ust-fd.so
+
+ -- Michael Jeanson <mjeanson@debian.org>  Thu, 05 Mar 2020 16:55:38 -0500
+
+ust (2.11.0-1) unstable; urgency=medium
+
+  * [baa9342] New upstream version 2.11.0
+  * [641faa0] Update symbols for 2.11.0
+  * [edf6b94] Bump debhelper to 11
+  * [311ebe7] Bump standards version to 4.4.1
+  * [a44044e] Add patch to fix typo 'acces'
+  * [25273b0] Update build dependencies for 2.11.0
+  * [0993c22] Update debian/copyright
+
+ -- Michael Jeanson <mjeanson@debian.org>  Mon, 21 Oct 2019 13:59:24 -0400
+
+ust (2.10.5-1) unstable; urgency=medium
+
+  * [4c51c2c] Update salsa Ci configuration
+  * [c3cb3c7] New upstream version 2.10.5
+
+ -- Michael Jeanson <mjeanson@debian.org>  Thu, 12 Sep 2019 11:08:06 -0400
+
+ust (2.10.4-1) unstable; urgency=medium
+
+  * [69cfc51] Update Salsa CI pipeline config
+  * [11113ed] New upstream version 2.10.4
+
+ -- Michael Jeanson <mjeanson@debian.org>  Thu, 30 May 2019 16:29:06 -0400
+
+ust (2.10.3-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * [33735c4] d/copyright: Change Format URL to correct one
+
+  [ Michael Jeanson ]
+  * [1e46cac] Add Salsa CI configuration
+  * [259748c] Remove partial changelog entry
+  * [b5cc43a] New upstream version 2.10.3
+  * [69b1488] Bump debhelper from old 9 to 10.
+  * [01e08c4] Re-export upstream signing key without extra signatures.
+  * [f655798] Drop unnecessary dependency on dh-autoconf.
+  * [9050194] Add Build-Depends-Package to symbols file
+  * [62988f4] Bump standards version to 4.3.0
+  * [550936c] Add upstream metadata file
+
+ -- Michael Jeanson <mjeanson@debian.org>  Thu, 07 Feb 2019 15:49:06 -0500
+
+ust (2.10.2-1) unstable; urgency=medium
+
+  * [6ee169b] Fix symbols for riscv64
+  * [29a5184] New upstream version 2.10.2
+  * [9cea2f8] Drop patch applied upstream
+  * [b312339] Remove symbols erroneously exported by liblttng-ust-fd.so.0
+  * [ed3731f] Drop x-python3-version
+  * [0acbf69] Drop removed files from copyright
+  * [8bd76e8] Bump standard to 4.2.0, no changes necessary
+
+ -- Michael Jeanson <mjeanson@debian.org>  Mon, 20 Aug 2018 16:58:24 -0400
+
+ust (2.10.1-3) unstable; urgency=medium
+
+  * [6798480] Update symbols for new riscv64 architecture
+  * [f81465e] Drop patch forcing obsolete java bytecode version 1.6
+  * [26128f4] Drop gcj compat patch
+  * [ca241ec] Fix build failure with openjdk >= 10 (Closes: #897483)
+
+ -- Michael Jeanson <mjeanson@debian.org>  Fri, 04 May 2018 10:46:44 -0400
+
+ust (2.10.1-2) unstable; urgency=medium
+
+  * [4561e9b] Moved VCS to salsa.debian.org
+  * [9132150] Add python3-distutils builddep (Closes: #896794)
+  * [f47371c] Bump standard to 4.1.4, no changes necessary
+  * [ef662e3] Use salsa canonical uri in VCS-Browser
+
+ -- Michael Jeanson <mjeanson@debian.org>  Tue, 24 Apr 2018 11:09:27 -0400
+
+ust (2.10.1-1) unstable; urgency=medium
+
+  * [cd47deb] New upstream version 2.10.1
+  * [4d1422b] Drop patch merged upstream
+  * [3dda0df] Switched my uploader email to @debian.org
+  * [74fb6ad] Update symbols for 2.10.1
+
+ -- Michael Jeanson <mjeanson@debian.org>  Thu, 30 Nov 2017 12:06:35 -0500
+
+ust (2.10.0-4) unstable; urgency=medium
+
+  * [cae46a9] Fix python3-lttngust load un-versioned library (Closes: #882366)
+
+ -- Michael Jeanson <mjeanson@ubuntu.com>  Tue, 21 Nov 2017 15:49:13 -0500
+
+ust (2.10.0-3) unstable; urgency=medium
+
+  * [68cef23] Add perf symbols to all archs
+  * [af1103b] Forgot m68k symbols in liblttng-ust-ctl4
+  * [7960048] Change priority to optional, as per policy
+  * [d5b199b] Bump standards version to 4.1.1
+  * [38c2762] Use https url in watch file
+
+ -- Michael Jeanson <mjeanson@ubuntu.com>  Wed, 18 Oct 2017 11:22:14 -0400
+
+ust (2.10.0-2) unstable; urgency=medium
+
+  * [4e2e3ec] Add a 'nojava' build profile
+  * [b60dc6d] Update symbols for m68k arch (Closes: #876149)
+  * [0432f3b] Disable java on hppa. (Closes: #876148)
+
+ -- Michael Jeanson <mjeanson@ubuntu.com>  Mon, 16 Oct 2017 14:13:09 -0400
+
+ust (2.10.0-1) unstable; urgency=medium
+
+  [ Michael Jeanson ]
+  * [f34755c] Move to DEP-14 branch naming
+  * [01efc7c] Rename source package to lttng-ust
+  * [a4bb887] Don't ship static lib, it's broken and useless
+  * [bfa2833] Install headers in multiarch path (Closes: #687460)
+  * [668fa1d] New upstream version 2.10.0
+  * [13a4c58] Bump soname of liblttng-ust-ctl from 2 to 4
+  * [5f3f693] Update symbols for 2.10.0
+  * [99fea0d] Updated debian copyright
+  * [56d0c0e] Revert source package rename
+
+  [ Jon Bernard ]
+  * [cfa34cd] Include missing symbols from previous update
+
+ -- Jon Bernard <jbernard@debian.org>  Thu, 14 Sep 2017 16:15:02 -0400
+
+ust (2.9.1-1) unstable; urgency=medium
+
+  * [dfb524d] Do not consider rc versions in watch file
+  * [c14b0be] New upstream version 2.9.1
+  * [18e7752] Refreshed patches for 2.9.1
+  * [40eaada] Remove python3 -dev build-depends (Closes: #866535)
+  * [b575fa7] Update symbols for 2.9.1
+  * [be69e6c] Enable hardening flags
+  * [3ff18c8] Bump standards version to 4.0.0
+
+ -- Michael Jeanson <mjeanson@ubuntu.com>  Fri, 30 Jun 2017 15:01:07 -0400
+
+ust (2.9.0-2) unstable; urgency=medium
+
+  * [b8d4e77] Add missing liblttng-ust-fd.so.* (Closes: #857166)
+
+ -- Michael Jeanson <mjeanson@ubuntu.com>  Wed, 08 Mar 2017 12:04:25 -0500
+
+ust (2.9.0-1) unstable; urgency=medium
+
+  * [35684de] Add Michael Jeanson as uploader
+  * [8aecff4] New upstream version 2.9.0
+  * [3164b44] Refreshed patches for 2.9.0
+  * [0015ce7] Update symbols for 2.9.0
+
+ -- Michael Jeanson <mjeanson@ubuntu.com>  Tue, 29 Nov 2016 18:07:41 -0500
+
+ust (2.8.1-1) unstable; urgency=medium
+
+  [ Michael Jeanson ]
+  * [b2b7411] Fix watch file
+  * [ed5244f] New upstream version 2.8.1
+  * [18ca9be] Add comments to patches
+
+ -- Jon Bernard <jbernard@debian.org>  Thu, 16 Jun 2016 17:20:00 +0000
+
+ust (2.8.0-1) unstable; urgency=medium
+
+  [ Michael Jeanson ]
+  * [f4dc524] New upstream version 2.8.0
+  * [4cc3ed0] Update java agent files for 2.8.0
+  * [4731103] Update symbols for 2.8.0
+  * [8f462e0] Refreshed patches for 2.8.0
+  * [46d005b] Bump standards version to 3.9.8, no changes necessary
+  * [2399a6e] Updated debian copyright
+
+ -- Jon Bernard <jbernard@debian.org>  Tue, 24 May 2016 21:42:37 -0400
+
+ust (2.7.2-1) unstable; urgency=medium
+
+  [ Michael Jeanson ]
+  * [b53d4b6] Add pgpsigurlmangle to watch file
+  * [bebae33] New upstream version 2.7.2
+  * [0dc0248] Update vcs fields to use secure uri
+  * [4812e35] Bump standards version to 3.9.7, no changes necessary
+  * [5f48885] Build-depend on default-jdk-headless
+
+ -- Jon Bernard <jbernard@debian.org>  Sat, 12 Mar 2016 06:48:40 -0500
+
+ust (2.7.1-1) unstable; urgency=medium
+
+  [ Michael Jeanson ]
+  * [d0d44d7] New upstream version 2.7.1
+  * [a596e16] Drop upstreamed patch fix-python-agent-build
+  * [f3d43ad] Fix java build on gcj
+
+ -- Jon Bernard <jbernard@debian.org>  Tue, 01 Dec 2015 19:58:42 +0000
+
+ust (2.7.0-1) unstable; urgency=medium
+
+  [ Michael Jeanson ]
+  * [fe82554] New upstream version 2.7.0
+  * [96d01f4] Drop patch applied upstream
+  * [a37cd0d] Add python agent subpackages
+  * [c285433] Update symbols file
+  * [1c48d56] Build on linux-any architectures
+  * [afbbd1e] The dev package depends on the python agent lib
+
+ -- Jon Bernard <jbernard@debian.org>  Sat, 24 Oct 2015 19:23:03 +0000
+
+ust (2.6.3-1) unstable; urgency=medium
+
+  [ Michael Jeanson ]
+  * [fd874dc] New upstream version 2.6.3
+  * [a0a6282] Refresh fix-incompatible-java-bytecode-format.patch
+
+ -- Jon Bernard <jbernard@debian.org>  Thu, 10 Sep 2015 20:17:15 +0000
+
+ust (2.6.2-2) unstable; urgency=medium
+
+  [ Michael Jeanson ]
+  * [f1bd937] Default to no unaligned access on unsupported archs
+  * [9663c9a] Add java subpackages
+  * [a23d3b8] Use python3 for lttng-gen-tp (Closes: #789790)
+
+ -- Jon Bernard <jbernard@debian.org>  Thu, 02 Jul 2015 19:10:06 +0000
+
+ust (2.6.2-1) unstable; urgency=medium
+
+  [ Michael Jeanson ]
+  * [55c5de5] Enable build on aarch64
+  * [35afe9f] Build on all supported architectures
+  * [1eae5b2] New upstream version 2.6.2
+  * [e4ed593] aarch64 support was merged upstream in 2.6.2
+  * [825bfda] Drop systemtap integration
+
+ -- Jon Bernard <jbernard@debian.org>  Thu, 18 Jun 2015 21:06:30 +0000
+
+ust (2.6.1-1) unstable; urgency=medium
+
+  [ Michael Jeanson ]
+  * [34a39b5] New upstream version 2.6.1
+  * [e750d6c] Update symbols files
+
+  [ Jon Bernard ]
+
+ -- Jon Bernard <jbernard@debian.org>  Fri, 29 May 2015 18:22:01 +0000
+
+ust (2.5.1-2) unstable; urgency=medium
+
+  * [65a639d] Tag arch-specfic symbols for i386 and amd64 (Closes: #767632)
+
+ -- Jon Bernard <jbernard@debian.org>  Tue, 04 Nov 2014 19:44:13 +0000
+
+ust (2.5.1-1) unstable; urgency=medium
+
+  * [e1dc4b2] New upstream version 2.5.1
+
+ -- Jon Bernard <jbernard@debian.org>  Wed, 22 Oct 2014 20:29:30 +0000
+
+ust (2.5.0-2) unstable; urgency=medium
+
+  * [900b9f9] Add symbols files for library packages.
+    Thanks to Dmitry Smirnov (Closes: #765842)
+  * [3458cf0] Bump standards version, no changes necessary
+
+ -- Jon Bernard <jbernard@debian.org>  Mon, 20 Oct 2014 18:12:54 +0000
+
+ust (2.5.0-1) unstable; urgency=medium
+
+  * [e695b9e] New upstream version 2.5.0
+
+ -- Jon Bernard <jbernard@debian.org>  Fri, 01 Aug 2014 22:10:16 -0400
+
+ust (2.4.1-1) unstable; urgency=low
+
+  [ Michael Jeanson ]
+  * [3f43734] Imported Upstream version 2.4.1
+
+ -- Jon Bernard <jbernard@debian.org>  Wed, 09 Apr 2014 13:03:09 -0400
+
+ust (2.4.0-4) unstable; urgency=low
+
+  [ Michael Jeanson ]
+  * [e7e05c8] Use dh-autoreconf to call autoreconf before building
+
+ -- Jon Bernard <jbernard@debian.org>  Tue, 18 Mar 2014 12:10:09 -0400
+
+ust (2.4.0-3) unstable; urgency=low
+
+  * [40e81f4] Bump dependency on liburcu to version 0.8.4
+
+ -- Jon Bernard <jbernard@debian.org>  Mon, 17 Mar 2014 16:13:37 -0400
+
+ust (2.4.0-2) unstable; urgency=low
+
+  * [3071879] Add explicit build dependency on python (Closes: #741687)
+
+ -- Jon Bernard <jbernard@debian.org>  Sat, 15 Mar 2014 21:11:42 -0400
+
+ust (2.4.0-1) unstable; urgency=low
+
+  * [5c01e4a] New upstream version 2.4.0
+
+ -- Jon Bernard <jbernard@debian.org>  Fri, 14 Mar 2014 16:36:21 -0400
+
+ust (2.4.0~rc4-1) experimental; urgency=low
+
+  * [6074bb4] New upstream version 2.4.0~rc4
+  * [e32544c] Update watch file to only uversionmangle
+  * [4050322] Include new libraries in liblttng-ust0
+
+ -- Jon Bernard <jbernard@debian.org>  Fri, 14 Feb 2014 15:55:28 -0500
+
+ust (2.3.0-4) unstable; urgency=low
+
+  * [3474a19] Fix upgrade from older liblttng-ust2 package.
+    Thanks to Andreas Beckmann (Closes: #730278, #730300)
+
+ -- Jon Bernard <jbernard@debian.org>  Wed, 27 Nov 2013 16:40:23 -0500
+
+ust (2.3.0-3) unstable; urgency=low
+
+  * [2891d68] Update copyright information (Closes: #728170)
+
+ -- Jon Bernard <jbernard@debian.org>  Sun, 17 Nov 2013 21:16:30 -0500
+
+ust (2.3.0-2) unstable; urgency=low
+
+  * [63eb27d] Bump standards version, no changes necessary
+  * [c0c304b] Correct version dependency on liburcu
+  * [539c38c] Update copyright holder email address
+  * [351faa2] Correct VCS links in control file
+  * [872f563] Move ctl library into its own package (Closes: #728256)
+
+ -- Jon Bernard <jbernard@debian.org>  Thu, 14 Nov 2013 15:38:30 -0500
+
+ust (2.3.0-1) unstable; urgency=low
+
+  * [f244fc1] New upstream version 2.3.0
+  * [e895d50] Bump standards version, no changes necessary
+  * [79a2884] Bump soname and remove old transitional packages
+
+ -- Jon Bernard <jbernard@debian.org>  Sun, 20 Oct 2013 08:55:33 -0400
+
+ust (2.1.1-6) unstable; urgency=low
+
+  * [c06ec11] Restrict liblttng-ust-dev's systemtap-sdt-dev dependency
+
+ -- Jon Bernard <jbernard@debian.org>  Fri, 18 Oct 2013 12:43:26 -0400
+
+ust (2.1.1-5) unstable; urgency=low
+
+  * [1a79688] Replace s390 with s390x
+  * [97e3fcb] Don't build against systemtap-sdt-dev on s390
+
+ -- Jon Bernard <jbernard@debian.org>  Wed, 16 Oct 2013 17:50:09 -0400
+
+ust (2.1.1-4) unstable; urgency=low
+
+  * [e9f26ce] Futher restrict the architecture list
+
+ -- Jon Bernard <jbernard@debian.org>  Sat, 14 Sep 2013 12:20:36 -0400
+
+ust (2.1.1-3) unstable; urgency=low
+
+  * [9a36287] Only build against systemtap where available
+
+ -- Jon Bernard <jbernard@debian.org>  Wed, 11 Sep 2013 15:31:56 -0400
+
+ust (2.1.1-2) unstable; urgency=low
+
+  * [390e7e4] Include liblttng-ust-ctl library in liblttng-ust0.
+    Thanks to Glenn McGrath
+
+ -- Jon Bernard <jbernard@debian.org>  Thu, 28 Feb 2013 03:48:49 -0500
+
+ust (2.1.1-1) unstable; urgency=low
+
+  * [97f524d] New upstream version 2.1.1
+
+ -- Jon Bernard <jbernard@debian.org>  Sun, 20 Jan 2013 16:54:48 -0500
+
+ust (2.1.0~rc2-1) unstable; urgency=low
+
+  * [13cb8e9] New upstream version 2.1.0~rc2
+
+ -- Jon Bernard <jbernard@debian.org>  Tue, 27 Nov 2012 14:14:40 -0500
+
+ust (2.1.0~rc1-1) unstable; urgency=low
+
+  * [62f05c8] Set ust-bin to depend on lttng-tools
+  * [c61bd3c] Update copyright notice
+  * [3837a81] Set Architecture to any
+  * [9a6b403] Update watchfile to support upstream RC releases
+  * [0cf3789] New upstream version 2.1.0~rc1
+
+ -- Jon Bernard <jbernard@debian.org>  Tue, 11 Sep 2012 15:34:43 -0400
+
+ust (2.0.4-1) unstable; urgency=low
+
+  * [8d66bf4] Update watch file
+  * [8d2e5cc] New upstream version 2.0.4
+  * [01fc3a7] Synchronize with upstream's packaging effort
+
+ -- Jon Bernard <jbernard@debian.org>  Fri, 29 Jun 2012 16:47:49 -0400
+
+ust (0.16-1) unstable; urgency=low
+
+  * [b2e8277] New upstream version 0.16 (Closes: #652252)
+  * [17ca597] Depend on version 0.6.6 of liburcu-dev
+  * [cdc6f54] Include pkgconfig in libust-dev
+
+ -- Jon Bernard <jbernard@debian.org>  Tue, 03 Jan 2012 14:44:19 -0500
+
+ust (0.15-3) unstable; urgency=low
+
+  * [61bf984] Remove liburcu1 from libust0 Depends (Closes: #637636)
+
+ -- Jon Bernard <jbernard@debian.org>  Sun, 04 Sep 2011 09:57:25 -0400
+
+ust (0.15-2) unstable; urgency=low
+
+  * [0fb2d5c] Update liburcu version dependency (Closes: #637636)
+
+ -- Jon Bernard <jbernard@debian.org>  Sat, 03 Sep 2011 10:20:38 -0400
+
+ust (0.15-1) unstable; urgency=low
+
+  * [bf5ba54] New upstream version 0.15 (Closes: #634408)
+  * [b5afb5c] Remove unneeded .la files (Closes: #633172)
+  * [889b99e] Remove patch for ppc tracepoint test, fixed upstream
+  * [50870be] Update liburcu version dependency
+  * [07b147e] Bump Standards-Version to 3.9.2, no changes necessary
+  * [e086e89] Rename libustcmd to libustctl
+  * [70f2f68] Remove libtap library, not installed anymore
+
+ -- Jon Bernard <jbernard@debian.org>  Tue, 19 Jul 2011 20:46:09 -0400
+
+ust (0.11-1) unstable; urgency=low
+
+  * [c53bcd] New upstream version 0.11
+  * [6ab7d2] Rename libustd to libustconsumer
+
+ -- Jon Bernard <jbernard@debian.org>  Sat, 15 Jan 2011 18:17:42 -0500
+
+ust (0.9-2) unstable; urgency=low
+
+  * [88b622] Add patch to link register test against libpthread
+    (Closes: #604955) - thanks to Angel Abad
+
+ -- Jon Bernard <jbernard@debian.org>  Thu, 09 Dec 2010 14:31:43 -0500
+
+ust (0.9-1) unstable; urgency=low
+
+  * [013eef] New upstream version 0.9 (Closes: #604955)
+  * [2e5bbe] Depend on no less than version 0.5.2 of liburcu
+  * [74b922] Do not build info document, included upstream
+  * [d29261] Update html document path to new location
+  * [2f6fea] Convert patches to git-buldpackage's patch queue format
+  * [abcfff] Update libust0 dependency for info documents
+  * [84cbbe] Remove s390 and s390x from architecture list, not supported
+    (Closes: #575407)
+  * [e79820] Add patch to fix compilation error on ppc
+
+ -- Jon Bernard <jbernard@debian.org>  Mon, 06 Dec 2010 21:16:07 -0500
+
+ust (0.8-1) unstable; urgency=low
+
+  * [e3e73f] Imported Upstream version 0.8
+  * [9eb1f6] Remove NMU security patch, applied upstream
+  * [0021e4] Generate info and html manual at build-time
+  * [899c34] Include new libtap library
+  * [94f07d] Remove debian manpages, included upstream
+
+ -- Jon Bernard <jbernard@debian.org>  Tue, 16 Nov 2010 12:23:41 -0500
+
+ust (0.7-3) unstable; urgency=low
+
+  * [2c4036] Restore info-dir-section patch from previous NMU
+
+ -- Jon Bernard <jbernard@debian.org>  Sat, 30 Oct 2010 20:31:26 -0400
+
+ust (0.7-2.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * debian/patches
+    - (CVE-2010-3386--bug598309): New. Fix LD_LIBRARY_PATH. Initial patch
+      idea thanks to Etienne Millon <etienne.millon@gmail.com> (grave,
+      security; Closes: #598309).
+
+ -- Jari Aalto <jari.aalto@cante.net>  Mon, 18 Oct 2010 18:55:42 +0300
+
+ust (0.7-2) unstable; urgency=low
+
+  * [7d6a5c] Remove sparc and alpha from supported architectures
+  * [5603a1] Add build dependency on version 0.4.6 of liburcu-dev
+  * [5f3cf6] Recommend liburcu-dev for libust-dev - thanks to Alexandre
+    Montplaisir <alexandre.montplaisir@gmail.com>
+  * [06df73] Depends on version 0.4.6 of liburcu0 for libust0
+
+ -- Jon Bernard <jbernard@debian.org>  Mon, 27 Sep 2010 04:27:29 -0400
+
+ust (0.7-1) unstable; urgency=low
+
+  * [ed442a] Imported Upstream version 0.7
+  * [0de6a7] Update installed libraries
+  * [dfd55b] Bump standards version to 3.9.1, no changes necessary
+
+ -- Jon Bernard <jbernard@debian.org>  Mon, 30 Aug 2010 22:27:57 -0400
+
+ust (0.5-1) unstable; urgency=low
+
+  * [79cd16] Imported Upstream version 0.5
+  * [18d8be] Include content of BSD license in copyright file
+  * [6799aa] Bump standards version to 3.9.0
+
+ -- Jon Bernard <jbernard@debian.org>  Fri, 02 Jul 2010 11:34:21 -0400
+
+ust (0.4-4) unstable; urgency=low
+
+  * [9a6b0e] Include info document in libust0
+  * [4fec9e] Reference info document in doc-base file
+  * [a90722] Patch info document to include dir section
+
+ -- Jon Bernard <jbernard@debian.org>  Tue, 01 Jun 2010 12:39:30 -0400
+
+ust (0.4-3) unstable; urgency=low
+
+  * Fix typo in libust0.doc-base
+
+ -- Jon Bernard <jbernard@debian.org>  Sat, 29 May 2010 10:20:21 -0400
+
+ust (0.4-2) unstable; urgency=low
+
+  * Restrict architecture list to that of liburcu
+
+ -- Jon Bernard <jbernard@debian.org>  Wed, 24 Mar 2010 09:50:02 -0400
+
+ust (0.4-1) unstable; urgency=low
+
+  * Initial release (Closes: #573361)
+
+ -- Jon Bernard <jbernard@debian.org>  Thu, 18 Mar 2010 16:18:28 -0400

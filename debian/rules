@@ -1,0 +1,47 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/architecture.mk
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+EXTRA_CONF_OPTS =
+EXTRA_DH_OPTS =
+
+# Disable java packages on architecture that don't have
+# an openjdk port.
+nojava_archs = hppa
+ifneq (,$(filter $(DEB_HOST_ARCH), $(nojava_archs)))
+export DEB_BUILD_PROFILES += nojava
+endif
+
+ifeq ($(filter nojava,$(DEB_BUILD_PROFILES)),)
+export JAVA_HOME = /usr/lib/jvm/default-java
+export CLASSPATH = /usr/share/java/log4j-1.2.jar
+
+EXTRA_DH_OPTS += --with javahelper
+
+EXTRA_CONF_OPTS += --enable-jni-interface \
+		   --enable-java-agent-all \
+		   --with-java-prefix=$(JAVA_HOME)
+endif
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@ --with=python3 $(EXTRA_DH_OPTS)
+
+override_dh_auto_configure:
+	PYTHON=python3 \
+	dh_auto_configure -- \
+		--includedir=/usr/include/$(DEB_HOST_MULTIARCH) \
+		--enable-python-agent \
+		$(EXTRA_CONF_OPTS)
+
+ifeq ($(filter nojava,$(DEB_BUILD_PROFILES)),)
+override_dh_makeshlibs:
+	dh_makeshlibs -V -X/usr/lib/$(DEB_HOST_MULTIARCH)/jni
+
+override_jh_manifest:
+	jh_manifest -pliblttng-ust-agent-java
+endif
