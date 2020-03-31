@@ -1,3 +1,9 @@
+lttng-ust (2.11.1-1ubuntu1) unstable; urgency=medium
+
+  * rename source head dir to lttng-ust
+
+ -- Changcheng Liu <changcheng.liu@aliyun.com>  Tue, 31 Mar 2020 22:47:00 +0800
+
 ust (2.11.1-1) unstable; urgency=medium
 
   * [f5f3f39] New upstream version 2.11.1
